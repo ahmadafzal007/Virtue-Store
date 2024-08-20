@@ -108,22 +108,22 @@ const footMenu = [
    {
      id: 1,
      icon: <FacebookIcon className="facebook_icon" fontSize="large" />,
-     path: "https://www.instagram.com/iam_nightbot/",
+     path: "https://www.facebook.com/profile.php?id=100009775657778",
    },
    {
      id: 2,
      icon: <TwitterIcon className="twitter_icon" fontSize="large" />,
-     path: "https://twitter.com/Iam_DEv22",
+     path: "https://twitter.com/Latoni2126",
    },
    {
      id: 3,
      icon: <InstagramIcon className="insta_icon" fontSize="large" />,
-     path: "https://www.instagram.com/cricket_weapon_store17",
+     path: "https://www.instagram.com/ahsanali5902/",
    },
    {
      id: 4,
      icon: <LinkedInIcon className="likedin_icon" fontSize="large" />,
-     path: "https://www.linkedin.com/in/iam-devesh/",
+     path: "https://www.linkedin.com/in/ahsan-ali-208036241/",
    },
  ];
 
@@ -152,7 +152,7 @@ const Footer = () => {
                     src={require("../../../Image/Footer/logo.png")}
                     alt="cricekt weapon logo"
                   />
-                  <h1 className="Foot_heading">Cricket Weapon</h1>
+                  <h1 className="Foot_heading">VirtueShop</h1>
                 </Link>
               </div>
 
@@ -202,7 +202,7 @@ const Footer = () => {
             </div>
 
             <div className="foot_links foot3">
-              <div className="foot_dowload_appLink">
+              {/* <div className="foot_dowload_appLink">
                 <h5>Download app</h5>
                 <div className="app_links">
                   <span className="googlePlayStore_link">
@@ -216,7 +216,7 @@ const Footer = () => {
                     </a>
                   </span>
                 </div>
-              </div>
+              </div> */}
               {/* socila media link */}
 
               <div className="foot_social">
@@ -265,9 +265,9 @@ const Footer = () => {
 
               <div className="foot_copyright">
                 <p>
-                  &copy; {currYear} | Cricket weapon, All Rights Reserved.
+                  &copy; {currYear} | VirtueShop, All Rights Reserved.
                   <span>
-                    <a href="iam-devesh.tech"> | Built by Iam_DEv</a>
+                    <a href="iam-devesh.tech"> | Built by VirtueShop</a>
                   </span>
                 </p>
               </div>

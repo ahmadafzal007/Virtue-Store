@@ -8,6 +8,8 @@ import Loader from "../layouts/loader/Loader";
 import { useAlert } from "react-alert";
 import HeroSlider from "./HeroSilder";
 import FeaturedSlider from "./FeatureSlider";
+
+
 function Home() {
   // we provided all parameter for react-alert at index.js
   const alert = useAlert();
@@ -30,7 +32,7 @@ function Home() {
       ) : (
         <>
           <>
-            <MataData title="Cricket Weapon" />
+            <MataData title="VirtueShop" />
             <div className="Home_Page">
               <div className="heroSlider_Home">
                 <HeroSlider />;
@@ -50,9 +52,7 @@ function Home() {
              
                 
                        <FeaturedSlider   products ={products}/> }
-                  
-                 
-              
+                          
               </div>
 
               <h2 className="trending_heading">Trending Products</h2>

@@ -19,7 +19,7 @@ function Header() {
 
   const [searchBarActive, setSearchBarActive] = useState(false);
 
-  const [country, setCountry] = useState("in"); // this is for flag
+  const [country, setCountry] = useState("pk"); // this is for flag
   const [sideMenu, setSideMenu] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
@@ -62,7 +62,8 @@ function Header() {
   return (
     <>
       <div className="header">
-        <div className="headerTop">
+
+        {/* <div className="headerTop">
           <div className="headerTopLeft">
             <p>We Offer's Free Shipping </p>
           </div>
@@ -98,7 +99,7 @@ function Header() {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* nav */}
         <div className="headerBottom">

@@ -149,9 +149,9 @@ const alert = useAlert();
                 <div className={classes.label}>EXPIRY</div>
                 <div
                   className={classes.value}
-                  onClick={() => handleValueCopy("12/23")}
+                  onClick={() => handleValueCopy("12/24")}
                 >
-                  12/23
+                  12/24
                 </div>
               </div>
               <div>
@@ -166,9 +166,9 @@ const alert = useAlert();
             </div>
             <div
               className={classes.value}
-              onClick={() => handleValueCopy("Robert Downey Jr")}
+              onClick={() => handleValueCopy("Ahsan Ali")}
             >
-              Robert Downey Jr
+              Ahsan Ali
             </div>
           </div>
         </DialogContent>

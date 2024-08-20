@@ -59,16 +59,16 @@ function UpdateProduct() {
   const fileInputRef = useRef();
   const [toggle, setToggle] = useState(false);
   const categories = [
-    "Cricket Kits",
-    "Batting Gloves",
-    "Batting Pads",
-    "Bats",
-    "Bags",
-    "Helmets",
-    "Balls",
-    "Stumps",
+    "Shirts",
+    "T-Shirts",
+    "Polos",
+    "Activewear",
+    "Shorts",
+    "Trousers",
     "Shoes",
-    "Clothing",
+    "Sweaters",
+    "Hoodies",
+    "Jackets",
     "Accessories",
   ];
   const handleCategoryChange = (e) => {

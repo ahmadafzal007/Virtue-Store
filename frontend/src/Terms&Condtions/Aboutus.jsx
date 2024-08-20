@@ -109,7 +109,7 @@ const About_UsPage = () => {
             <Grid item xs={12} sm={6}>
               <img
                 src={TermsImage}
-                alt="CricketWeapon"
+                alt="VirtueShop"
                 className={classes.image_about}
               />
             </Grid>
@@ -122,21 +122,10 @@ const About_UsPage = () => {
                 About Us
               </Typography>
               <Typography variant="body1" className={classes.introText_about}>
-                CricketWeapon store is an online cricket sports selling startup
-                started in 2019. We have served more than 20,000 customers
-                through social media and other platforms. We are proud to offer
-                our own products under the brand name CW, also known as "Cricket
-                Weapon".
+              At VirtueShop, we are dedicated to transforming the landscape of online shopping in Pakistan. Our commitment to innovation is reflected in our use of cutting-edge augmented reality (AR) technology, which sets us apart in the e-commerce industry. By integrating AR into our virtual trial rooms, customers can immerse themselves in a unique shopping experience, visualizing how products will fit and look in real-time. This advanced feature not only reduces the uncertainty associated with online shopping but also minimizes returns, thereby enhancing overall customer satisfaction and confidence in their purchases.
               </Typography>
               <Typography variant="body1" className={classes.introText_about}>
-                CricketWeapon was founded by Lokesh Samant, a talented cricket
-                player who has represented the Under 16 and Under 19 teams.
-                Lokesh started this business to support his expenses and
-                received an overwhelming response. He has sold cricket equipment
-                to more than 20,000 customers till date. Now, he aims to expand
-                his business to an international level by launching his own
-                website and introducing new and genuine cricket products at
-                competitive prices.
+              VirtueShop prioritizes customer-centric solutions. Our platform is designed with user convenience in mind, offering a seamless and intuitive interface for browsing, searching, and purchasing products. From personalized recommendations based on customer preferences and body measurements to secure and hassle-free payment integration, every aspect of VirtueShop is tailored to provide a delightful shopping journey. Our dedication to excellence, coupled with our passion for innovation, makes VirtueShop the ultimate destination for modern shoppers seeking convenience, quality, and cutting-edge technology in their online shopping experience.
               </Typography>
             </Grid>
           </Grid>
@@ -150,28 +139,13 @@ const About_UsPage = () => {
             Who We Are
           </Typography>
           <Typography variant="body1" className={classes.infoText_about}>
-            CricketWeapon is dedicated to providing high-quality cricket
-            equipment and accessories to cricket enthusiasts worldwide. Our
-            mission is to empower cricketers with the best tools to enhance
-            their performance on the field. With a focus on innovation,
-            craftsmanship, and customer satisfaction, we have become a trusted
-            brand in the cricket community.
+          VirtueShop is more than just an e-commerce platform - we are pioneers of innovation in online shopping. With a relentless focus on customer satisfaction and cutting-edge technology, we have redefined the way people shop online in Pakistan. Our team comprises passionate individuals driven by a shared vision to create a seamless and engaging shopping experience for every customer. We believe in leveraging the latest advancements in augmented reality (AR) technology to bridge the gap between traditional retail and online shopping, allowing customers to virtually try on clothing items and visualize how they will look in real life.
           </Typography>
           <Typography variant="body1" className={classes.infoText_about}>
-            Since our inception in 2019, we have built a strong customer base
-            and expanded our product range to cater to the diverse needs of
-            players at every level. We take pride in offering genuine cricket
-            products that are carefully curated and tested for quality and
-            performance. Our team of experts works closely with manufacturers to
-            ensure that our customers receive top-notch products.
+          Our commitment to excellence extends beyond technology; we are dedicated to curating a diverse range of high-quality products from trusted brands. Whether it's fashion, accessories, electronics, or home essentials, VirtueShop offers a carefully curated selection to cater to every customer's needs and preferences. We take pride in providing a user-friendly platform that makes browsing, selecting, and purchasing products a breeze. Our customer-centric approach ensures that each interaction with VirtueShop is memorable, efficient, and tailored to meet the unique requirements of our valued customers.
           </Typography>
           <Typography variant="body1" className={classes.infoText_about}>
-            At CricketWeapon, we believe in fostering long-term relationships
-            with our customers. We provide excellent customer service and strive
-            to exceed expectations at every step. We are committed to delivering
-            a seamless online shopping experience and ensuring customer
-            satisfaction. Join us on this exciting journey as we continue to
-            grow and expand our reach in the world of cricket.
+          At VirtueShop, integrity, transparency, and reliability are at the core of everything we do. We strive to build lasting relationships with our customers based on trust, authenticity, and exceptional service. Our mission is to empower shoppers with a convenient, enjoyable, and secure online shopping experience that exceeds their expectations. With VirtueShop, you can shop with confidence, knowing that you are part of a forward-thinking community dedicated to redefining the future of e-commerce in Pakistan.
           </Typography>
         </Container>
         <Container className={classes.container_12}>
@@ -183,22 +157,10 @@ const About_UsPage = () => {
             Our Mission
           </Typography>
           <Typography variant="body1" className={classes.infoText_about}>
-            CricketWeapon is driven by the mission to provide high-quality
-            cricket equipment and accessories at affordable prices. We aim to
-            make cricket accessible to players worldwide and support their
-            passion for the sport. Our mission is to offer a wide range of
-            cricket equipment, including bats, balls, protective gear, and
-            accessories, that meet the highest standards of quality and
-            performance.
+          At VirtueShop, our mission is to revolutionize the online shopping landscape in Pakistan by providing a seamless and immersive experience that transcends traditional boundaries. We aim to empower customers with innovative technology, such as augmented reality (AR), to make informed purchase decisions confidently. Our mission is to bridge the gap between online and in-store shopping by offering virtual try-on solutions, personalized recommendations, and a diverse range of high-quality products from trusted brands.
           </Typography>
           <Typography variant="body1" className={classes.infoText_about}>
-            We are committed to continuously innovating and improving our
-            product range to meet the evolving needs of cricketers. Our team of
-            experts works closely with manufacturers and conducts rigorous
-            quality testing to ensure that every product we offer delivers
-            exceptional performance on the field. We believe that every player
-            deserves the best tools to enhance their skills and achieve their
-            cricketing goals.
+          We are committed to enhancing customer satisfaction, reducing return rates, and increasing retailer profitability through our cutting-edge solutions. Our mission is fueled by a passion for innovation, customer-centricity, and a drive to set new benchmarks in the e-commerce industry. With VirtueShop, our mission is not just about transactions; it's about creating memorable experiences, fostering trust, and shaping the future of online retail in Pakistan.
           </Typography>
 
           <div className={classes.buttonContainer_about}>

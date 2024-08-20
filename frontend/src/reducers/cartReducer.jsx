@@ -13,7 +13,7 @@ export function cartReducer(state = { cartItems: [], shippingInfo: {} }, action)
       })
    
       console.log(action.payload);  
-      // if exist alerady then replace same product 
+      // if exist already then replace same product 
       if (isExist) {
         return {
           ...state,

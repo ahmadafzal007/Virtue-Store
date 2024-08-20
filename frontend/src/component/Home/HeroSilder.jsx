@@ -87,35 +87,30 @@ const useStyles = makeStyles((theme) => ({
 
 const slides = [
   {
-    image: require("../../Image/Cricket-wepon/img2.png"),
-    quote:
-      "Unleash Your Passion for Cricket and Embrace the Thrill of the Game",
-    saleText:
-      "Get in the game with up to 50% off on a wide range of cricket gear's",
+    image: require("../../Image/virtueshop/img2.avif"),
+    quote: "Discover Quality Gear for Enthusiasts and Professionals Alike",
+    saleText: "Unleash Your Passion with Up to 50% Off on Selected Equipment",
     productText: "Shop Now",
   },
   {
-    image: require("../../Image/Cricket-wepon/03.jpg"),
-    quote:
-      "Experience the Unparalleled Excitement and Achieve Victory with Our Premium Cricket Equipment",
-    saleText:
-      "Limited Time Offer: Don't miss out on the opportunity to upgrade your game",
+    image: require("../../Image/virtueshop/03.avif"),
+    quote: "Experience the Thrill with Top-Notch Gear and Accessories",
+    saleText: "Upgrade Your Game with Limited Time Offers on Premium Equipment",
     productText: "Buy Now",
   },
   {
-    image: require("../../Image/Cricket-wepon/01.jpg"),
-    quote:
-      "Gear up with the Latest Innovations and Dominate the Field like Never Before",
-    saleText: "Discover New Arrivals and stay ahead of the competition",
+    image: require("../../Image/virtueshop/01.avif"),
+    quote: "Master Your Craft with Innovative and Reliable Gear",
+    saleText: "Stay Ahead of the Curve with New Arrivals and Latest Innovations",
     productText: "Explore",
   },
   {
-    image: require("../../Image/Cricket-wepon/04.jpg"),
-    quote:
-      "Elevate Your Performance and Unleash Your True Cricketing Potential with Our Cutting-Edge Gear",
-    saleText: "New Arrivals: Enhance your skills and excel on the field",
+    image: require("../../Image/virtueshop/02.avif"),
+    quote: "Achieve Excellence with Cutting-Edge Equipment",
+    saleText: "Enhance Your Skills and Elevate Your Performance",
     productText: "Upgrade Now",
-  },
+  }
+  
 ];
 
 export default function HeroSlider() {

@@ -1,5 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import { TwitterShareButton, TwitterIcon } from "react-share";
+import { WhatsappShareButton, WhatsappIcon } from "react-share";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 import {
   Card,
   CardActionArea,
@@ -12,9 +16,14 @@ import {
 import Rating from "@material-ui/lab/Rating";
 import { FitScreen } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import {dispalyMoney  ,generateDiscountedPrice} from "../DisplayMoney/DisplayMoney"
+import {
+  dispalyMoney,
+  generateDiscountedPrice,
+} from "../DisplayMoney/DisplayMoney";
 import { addItemToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
+// import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "280px",
@@ -24,18 +33,32 @@ const useStyles = makeStyles((theme) => ({
     currsor: "pointer",
   },
   media: {
-  
     height: 200,
     width: "90%",
     objectFit: "cover",
-    margin : "1rem 1rem 0 1rem"
-   },
+    margin: "1rem 1rem 0 1rem",
+  },
   button: {
     backgroundColor: "black",
     color: "white",
     borderRadius: 4,
     fontWeight: "bold",
     width: "100%",
+    height: 45,
+    "&:hover": {
+      backgroundColor: "#ed1c24",
+      color: "black",
+      fontWeight: "bold",
+    },
+  },
+  buttonW: {
+    backgroundColor: "black",
+    marginLeft: "10px",
+    width: "20px",
+    color: "white",
+    borderRadius: 4,
+    fontWeight: "bold",
+    // width: "100%",
     height: 45,
     "&:hover": {
       backgroundColor: "#ed1c24",
@@ -55,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     fontSize: "0.8rem",
-    fontWeight: 500, 
+    fontWeight: 500,
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     display: "-webkit-box",
@@ -64,26 +87,69 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
   },
+  shareIcon: {
+    display: "flex",
+    justifyContent: "space-around",
+    // border: "2px solid red",
+    alignItems: "center",
+  },
+  instagramButton: {
+    backgroundColor: "#ed1c24",
+    color: "white",
+    borderRadius: "100%",
+    width: "32px",
+    height: "32px",
+    outline: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    // fontWeight: "bold",
+    // padding: "10px 20px",
+    
+    "&:hover": {
+      backgroundColor: "#ed1c24",
+    },
+  },
 }));
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
-    let discountPrice = generateDiscountedPrice(product.price);
-    discountPrice = dispalyMoney(discountPrice);
+  let discountPrice = generateDiscountedPrice(product.price);
+  discountPrice = dispalyMoney(discountPrice);
   const oldPrice = dispalyMoney(product.price);
-  
+
   const truncated =
-    product.description
-      .split(" ")
-      .slice(0, 5)
-      .join(" ") + "...";
-      const  nameTruncated = product.name.split(" ").slice(0, 3).join(" ") + "...";
+    product.description.split(" ").slice(0, 5).join(" ") + "...";
+  const nameTruncated = product.name.split(" ").slice(0, 3).join(" ") + "...";
 
+  const addTocartHandler = (id, qty) => {
+    dispatch(addItemToCart(id, qty));
+  };
 
-      const addTocartHandler = (id , qty) => {
-        dispatch(addItemToCart(id , qty))
-      }
+  // const handleWhatsAppShare = () => {
+  //   // Generate the shareable link for the product
+  //   const shareableLink = `${window.location.origin}/product/${product._id}`;
+
+  //   // Format the message with product details
+  //   const message = `${product.name}\nPrice: ${product.price}\nDescription: ${product.description}\nImage: ${product.images[0].url}\n${shareableLink}`;
+
+  //   // Open WhatsApp with the formatted message
+  //   const whatsappUrl = `whatsapp://send?text=${encodeURIComponent(message)}`;
+  //   window.open(whatsappUrl);
+  // };
+
+  const handleInstagramShare = () => {
+    // Generate the shareable link for the product
+    const shareableLink = `${window.location.origin}/product/${product._id}${product.images[0].url}`;
+
+    // Open Instagram with the formatted message
+    const instagramUrl = `instagram://library?AssetPath=${encodeURIComponent(
+      shareableLink
+    )}`;
+    window.open(instagramUrl);
+  };
 
   return (
     <Card className={classes.root}>
@@ -144,6 +210,43 @@ const ProductCard = ({ product }) => {
           Add to Cart
         </Button>
       </Box>
+
+      <div className={classes.shareIcon}>
+        <TwitterShareButton
+          url={`${window.location.origin}/product/${product._id}`}
+          title={product.name}
+          className={classes.buttonW}
+        >
+          <TwitterIcon size={32} round={true} />
+        </TwitterShareButton>
+        <FacebookShareButton
+          // url={`${window.location.origin}/product/${product._id}?imageId=${product.images[0].id}`}
+          url={`${window.location.origin}/product/${product._id}${product.images[0].url}`}
+          title={product.name}
+          className={classes.buttonW}
+        >
+          <FacebookIcon size={32} round={true} />
+        </FacebookShareButton>
+        <WhatsappShareButton
+          // url={`${window.location.origin}/product/${product._id}?imageId=${product.images[0].id}`}
+          url={`${window.location.origin}/product/${product._id}${product.images[0].url}`}
+          title={product.name}
+          className={classes.buttonW}
+        >
+          <WhatsappIcon size={32} round={true} />
+        </WhatsappShareButton>
+        <div className={classes.instagramButton} onClick={handleInstagramShare}>
+        
+        <InstagramIcon size={128} />
+        </div>
+        {/* <Button
+          variant="contained"
+          className={classes.instagramButton}
+          onClick={handleInstagramShare}
+        >
+          <InstagramIcon size={132} />
+        </Button> */}
+      </div>
     </Card>
   );
 };

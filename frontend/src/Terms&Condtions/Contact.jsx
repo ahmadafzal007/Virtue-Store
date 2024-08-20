@@ -13,6 +13,7 @@ import { useAlert } from "react-alert";
 import { useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import MetaData from "../component/layouts/MataData/MataData";
+
 const useStyles = makeStyles((theme) => ({
   root_contactus: {
     padding: "8rem 0",
@@ -174,9 +175,18 @@ const ContactForm = () => {
   const classes = useStyles();
   const alert = useAlert();
   const history = useHistory();
+  // const handleCall = () => {
+  //   window.location.href = "tel:+923345325782";
+  // };
+
   const handleCall = () => {
-    window.location.href = "tel:+8171280446";
-  };
+    const phoneNumber = "923345325782"; 
+    const message = "Hello, I'm interested in your products."; 
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -208,15 +218,15 @@ const ContactForm = () => {
             }}
             onClick={handleCall}
           >
-            8171280446
+            03345325782
           </strong>
           .
         </Typography>
 
         <Typography variant="body2" className={classes.para_contact}>
-          <span className={classes.para2}>7:00-6:00 MST Monday-Friday</span>
+          <span className={classes.para2}>7:00-6:00 GMT Monday-Friday</span>
           <br />
-          <span className={classes.para2}>9:00-4:00 MST Saturday</span>
+          <span className={classes.para2}>9:00-4:00 GMT Saturday</span>
           <br />
           <span className={classes.para2}>Closed Sunday</span>
         </Typography>
@@ -228,14 +238,14 @@ const ContactForm = () => {
 
         <Typography variant="body2" className={classes.address_contacts}>
           <span style={{ fontWeight: "500", paddingBottom: "0.5rem" }}>
-            CricketWeapon Store, Pvt Ltd.
+            VirtueShop , Pvt Ltd.
           </span>
           <br />
-          15130 Sec 22
+          abc sector
           <br />
-          Noida, UP 201301
+          Rwp, Islamabad 46200
           <br />
-          India
+          Pakistan
         </Typography>
 
         <div className={classes.buttonGroup}>
@@ -331,7 +341,7 @@ const ContactForm = () => {
                   }}
                 >
                   <MenuItem value="english">English</MenuItem>
-                  <MenuItem value="hindi">Hindi</MenuItem>
+                  <MenuItem value="hindi">Urdu</MenuItem>
                   <MenuItem value="japanese">Japanese</MenuItem>
                   <MenuItem value="chinese">Chinese</MenuItem>
                   <MenuItem value="german">German</MenuItem>

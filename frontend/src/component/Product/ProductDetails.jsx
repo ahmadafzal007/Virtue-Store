@@ -203,7 +203,7 @@ useEffect(() => {
                       <div className="prod_details_offers">
                         <h4>Offers and Discounts</h4>
                         <ul>
-                          <li>No Cost EMI on Credit Card</li>
+                          {/* <li>No Cost EMI on Credit Card</li> */}
                           <li>Pay Later & Avail Cashback</li>
                         </ul>
                       </div>

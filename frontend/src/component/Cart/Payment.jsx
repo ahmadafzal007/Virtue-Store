@@ -39,7 +39,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import AssuredWorkloadOutlinedIcon from "@mui/icons-material/AssuredWorkloadOutlined";
 import { ReactComponent as MasterCard } from "../../Image/payment-svg/mastercard.svg";
 import { ReactComponent as Visa } from "../../Image/payment-svg/visa (1).svg";
-import { ReactComponent as Paytm } from "../../Image/payment-svg/paytm.svg";
 import {
   dispalyMoney,
   generateDiscountedPrice,
@@ -436,7 +435,7 @@ const PaymentComponent = () => {
               line1: shippingInfo.address,
               state: shippingInfo.state,
               postal_code: shippingInfo.pinCode,
-              country: "IN",
+              country: "PAK",
             },
           },
         },
@@ -550,12 +549,7 @@ const PaymentComponent = () => {
                           height: "auto",
                         }}
                       />
-                      <Paytm
-                        style={{
-                          width: "5%",
-                          height: "auto",
-                        }}
-                      />
+                      
                     </Grid>
                   </Grid>
                   <Grid item xs={6}>
@@ -621,7 +615,7 @@ const PaymentComponent = () => {
               >
                 By clicking "Place Order", you agree to our
                 <Link href="#" className={classes.privacyText}>
-                  Cricket Weapon Terms & Conditions
+                  VirtueShop Terms & Conditions
                 </Link>
               </Typography>
               <Button
