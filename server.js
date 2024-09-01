@@ -1,6 +1,6 @@
 const app = require("./app");
 const dotenv = require("dotenv");
-const connectDB = require("./db/connectDB")
+const connectDB = require("./backend/db/connectDB")
 const cloudinary = require("cloudinary");
 
 // Handling Uncaught Execption => anything not defind Uncaught Execption 

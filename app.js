@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const errorMiddleware = require("./middleWare/error");
+const errorMiddleware = require("./backend/middleWare/error");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload"); // used for image and other files
@@ -16,10 +16,10 @@ require("dotenv").config({ path: "./config/config.env" });
 
 // routes
 
-const user = require("./route/userRoute");
-const order = require("./route/orderRoute");
-const product = require("./route/productRoute")
-const payment = require("./route/paymentRoute");
+const user = require("./backend/route/userRoute");
+const order = require("./backend/route/orderRoute");
+const product = require("./backend/route/productRoute")
+const payment = require("./backend/route/paymentRoute");
 
 // for req.cookie to get token while autentication
 app.use(cookieParser());
