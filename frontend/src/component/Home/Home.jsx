@@ -9,7 +9,6 @@ import { useAlert } from "react-alert";
 import HeroSlider from "./HeroSilder";
 import FeaturedSlider from "./FeatureSlider";
 
-
 function Home() {
   // we provided all parameter for react-alert at index.js
   const alert = useAlert();
@@ -38,7 +37,7 @@ function Home() {
                 <HeroSlider />
               </div>
 
-              {/* <div className="feature" style={{ marginTop: "2.7rem" }}>
+              <div className="feature" style={{ marginTop: "2.7rem" }}>
                 <h2
                   style={{
                     textAlign: "center",
@@ -48,11 +47,7 @@ function Home() {
                 >
                   Featured Products
                 </h2>
-                {products &&
-             
-                
-                       <FeaturedSlider   products ={products}/> }
-                          
+                {products && <FeaturedSlider products={products} />}
               </div>
 
               <h2 className="trending_heading">Trending Products</h2>
@@ -62,7 +57,7 @@ function Home() {
                   products.map((product) => (
                     <ProductCard key={product._id} product={product} />
                   ))}
-              </div> */}
+              </div>
             </div>
           </>
         </>
