@@ -2,16 +2,17 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, A11y, Autoplay } from "swiper";
 import "swiper/swiper-bundle.min.css";
-
 import "swiper/swiper.min.css";
 import "./FeatureSlider.css";
 import { Link } from "react-router-dom";
-import {
-  dispalyMoney,
-  generateDiscountedPrice,
-} from "../DisplayMoney/DisplayMoney";
+import { dispalyMoney, generateDiscountedPrice } from "../DisplayMoney/DisplayMoney";
+
 const FeaturedSlider = ({ products }) => {
- 
+  // Ensure products array is not empty before rendering Swiper
+  if (!products || products.length === 0) {
+    return null;
+  }
+
   return (
     <Swiper
       modules={[EffectCoverflow, Pagination, A11y, Autoplay]}
@@ -46,9 +47,8 @@ const FeaturedSlider = ({ products }) => {
       className="featured_swiper"
     >
       {products.map((product) => {
-        const { _id, images, name ,price  } = product;
-        let newPrice = generateDiscountedPrice(price);
-        newPrice = dispalyMoney(newPrice);
+        const { _id, images, name, price } = product;
+        const newPrice = dispalyMoney(generateDiscountedPrice(price));
         const oldPrice = dispalyMoney(price);
 
         return (
@@ -59,7 +59,11 @@ const FeaturedSlider = ({ products }) => {
             >
               <div className="featured_title">{name}</div>
               <figure className="featured_img">
-                <img src={images[0].url} alt={name} />
+                {images?.[0]?.url ? (
+                  <img src={images[0].url} alt={name} />
+                ) : (
+                  <img src="default-image-url" alt="default" />
+                )}
               </figure>
               <h2 className="products_price">
                 <span className="final_price">{newPrice}</span> &nbsp;
